@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Function optimization: Класс StopCriteria</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Function optimization
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Programm provides an opportinity to calculate an argument of minunimum of functions.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="classStopCriteria-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс StopCriteria<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Родительский виртуальный класс критерия остановки.  
+ <a href="classStopCriteria.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="stopCrit_8h_source.html">stopCrit.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:StopCriteria:</div>
+<div class="dyncontent">
+<div class="center"><img src="classStopCriteria__inherit__graph.png" border="0" usemap="#StopCriteria_inherit__map" alt="Inheritance graph"/></div>
+<map name="StopCriteria_inherit__map" id="StopCriteria_inherit__map">
+<area shape="rect" title="Родительский виртуальный класс критерия остановки." alt="" coords="112,5,211,32"/>
+<area shape="rect" href="classStopNULL.html" title="Дочерний класс критерия остановки. Останавливает процесс поиска минимума при достижении порового числ..." alt="" coords="5,80,91,107"/>
+<area shape="rect" href="classStopNumLI.html" title="Дочерний класс критерия остановки. Останавливает процесс поиска минимума при достижении порового числ..." alt="" coords="115,80,208,107"/>
+<area shape="rect" href="classStopValLI.html" title="Дочерний класс методов. Останавливает процесс поиска минимума при слишком малом улучшении...." alt="" coords="232,80,315,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a7d54c4a35d83d45dd0884da46377cdee"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStopCriteria.html#a7d54c4a35d83d45dd0884da46377cdee">condition</a> (int, double)=0</td></tr>
+<tr class="separator:a7d54c4a35d83d45dd0884da46377cdee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade4c0545248dd58cf831337b7312abf5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStopCriteria.html#ade4c0545248dd58cf831337b7312abf5">quit_message</a> ()=0</td></tr>
+<tr class="separator:ade4c0545248dd58cf831337b7312abf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0568b0231eb74e5a26341db99885ebd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStopCriteria.html#a0568b0231eb74e5a26341db99885ebd8">StopCriteria</a> ()</td></tr>
+<tr class="memdesc:a0568b0231eb74e5a26341db99885ebd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор.  <a href="classStopCriteria.html#a0568b0231eb74e5a26341db99885ebd8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0568b0231eb74e5a26341db99885ebd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc427a6c7efc5196a68683565b806cce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStopCriteria.html#afc427a6c7efc5196a68683565b806cce">StopCriteria</a> (int x, double y)</td></tr>
+<tr class="separator:afc427a6c7efc5196a68683565b806cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a0dc5e230bbe791c90c51dbda0ff832cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStopCriteria.html#a0dc5e230bbe791c90c51dbda0ff832cf">itern</a> =100</td></tr>
+<tr class="memdesc:a0dc5e230bbe791c90c51dbda0ff832cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Целочисленная переменная.  <a href="classStopCriteria.html#a0dc5e230bbe791c90c51dbda0ff832cf">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0dc5e230bbe791c90c51dbda0ff832cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa973616ac6030000813916b84407ba68"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStopCriteria.html#aa973616ac6030000813916b84407ba68">eps</a> =0.001</td></tr>
+<tr class="memdesc:aa973616ac6030000813916b84407ba68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вещественная переменная.  <a href="classStopCriteria.html#aa973616ac6030000813916b84407ba68">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa973616ac6030000813916b84407ba68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Родительский виртуальный класс критерия остановки. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a0568b0231eb74e5a26341db99885ebd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0568b0231eb74e5a26341db99885ebd8">&#9670;&nbsp;</a></span>StopCriteria() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StopCriteria::StopCriteria </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор. </p>
+<p>Конструктор по умолчанию. </p>
+
+</div>
+</div>
+<a id="afc427a6c7efc5196a68683565b806cce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc427a6c7efc5196a68683565b806cce">&#9670;&nbsp;</a></span>StopCriteria() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StopCriteria::StopCriteria </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Конструктор. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Предельное число итераций без улучшения. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Минимально допустимая разница значений. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a7d54c4a35d83d45dd0884da46377cdee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d54c4a35d83d45dd0884da46377cdee">&#9670;&nbsp;</a></span>condition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool StopCriteria::condition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Проверяет условие выхода из процесс поиска минимума. </p><dl class="section return"><dt>Возвращает</dt><dd>True, если условие выполнено, false иначе. </dd></dl>
+
+<p>Замещается в <a class="el" href="classStopNULL.html#a86d2e0337546a513a3d6f21867f80d47">StopNULL</a>, <a class="el" href="classStopValLI.html#a52d1315e49d8c05969e6bb647be15f1f">StopValLI</a> и <a class="el" href="classStopNumLI.html#a45529b9c9250fcaf2bb262791c7a3880">StopNumLI</a>.</p>
+
+</div>
+</div>
+<a id="ade4c0545248dd58cf831337b7312abf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade4c0545248dd58cf831337b7312abf5">&#9670;&nbsp;</a></span>quit_message()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void StopCriteria::quit_message </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Выводит в консоль сообщение о выходе. </p>
+
+<p>Замещается в <a class="el" href="classStopNULL.html#a330ca7104361b179ec8ded4936491338">StopNULL</a>, <a class="el" href="classStopValLI.html#a3abf7b987636322dd1d3cb7de711ad73">StopValLI</a> и <a class="el" href="classStopNumLI.html#acbbec1f2340065b078e2034e03a6502d">StopNumLI</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="aa973616ac6030000813916b84407ba68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa973616ac6030000813916b84407ba68">&#9670;&nbsp;</a></span>eps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double StopCriteria::eps =0.001</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вещественная переменная. </p>
+<p>Хранит минимально допустимая разница значений. </p>
+
+</div>
+</div>
+<a id="a0dc5e230bbe791c90c51dbda0ff832cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dc5e230bbe791c90c51dbda0ff832cf">&#9670;&nbsp;</a></span>itern</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int StopCriteria::itern =100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Целочисленная переменная. </p>
+<p>Хранит предельное число итераций без улучшения. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li><a class="el" href="stopCrit_8h_source.html">stopCrit.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

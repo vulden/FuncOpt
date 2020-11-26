@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Function optimization: Исходный файл funcOpt.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Function optimization
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Programm provides an opportinity to calculate an argument of minunimum of functions.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">funcOpt.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="funcOpt_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef FUNCOPT_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define FUNCOPT_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * \author Владимир Попов &lt;popov99vlad@gmail.com&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  \version 1.0</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  \date Ноябрь 2020 года</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * \section Описание:</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * Программа позволяет вычислять минимум функции в области.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * Функция, область, метод оптимизации и критерий остановки могут быть заданы пользователем.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *******************************************************************************/</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> pi = 3.1415926;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classfunc.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classfunc.html">func</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classfunc.html#a25ac1173786b7f24d70698c6c61fc2c1">eval</a>(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; x) = 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classfunc.html#a9c337bc668abdf3aa25b7deff2276d16">print</a>()=0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classfunc.html#a6b8594d18f04da532feccab749e52ed7">expectedArgMin</a> ()=0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classfunc.html#af3fca67b06e2ca1e61e2d7835846132f">dimentions</a> ()=0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classfunc__1.html">   57</a></span>&#160;<span class="keyword">class </span><a class="code" href="classfunc__1.html">func_1</a> : <span class="keyword">public</span> <a class="code" href="classfunc.html">func</a> {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classfunc__1.html#ad83b28755986b34fda91463a4838d96a">eval</a>(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; x) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classfunc__1.html#a198f11bde289443c6bfd1230b74c523b">print</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classfunc__1.html#a0a9378546d276e42f669feeaca96430a">expectedArgMin</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classfunc__1.html#a1f599af099213288235b653c337d0026">dimentions</a> ()<span class="keyword">override</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classfunc__2.html">   69</a></span>&#160;<span class="keyword">class </span><a class="code" href="classfunc__2.html">func_2</a> : <span class="keyword">public</span> <a class="code" href="classfunc.html">func</a> {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classfunc__2.html#a6305d8a33656232b0e7735a0c4ca92f0">eval</a>(<span class="keyword">const</span>  std::vector&lt;double&gt;&amp; x) <span class="keyword">override</span> ;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classfunc__2.html#a37b7f2800da9f85b95e13bedaf009617">print</a>() <span class="keyword">override</span> ;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classfunc__2.html#ade1ce0191ee05869c733e6a833cd5c39">expectedArgMin</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classfunc__2.html#a664588444a1724c707d6e2cac9f27837">dimentions</a> ()<span class="keyword">override</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classfunc__3.html">   81</a></span>&#160;<span class="keyword">class </span><a class="code" href="classfunc__3.html">func_3</a> : <span class="keyword">public</span> <a class="code" href="classfunc.html">func</a> {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classfunc__3.html#a6c3dc2bbf9f5a32c112aa23a715bd1c6">eval</a>(<span class="keyword">const</span>  std::vector&lt;double&gt;&amp; x) <span class="keyword">override</span> ;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classfunc__3.html#a400d8fa56699349ee67805f216542374">print</a>() <span class="keyword">override</span> ;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classfunc__3.html#a3c3f31f70f6df1e3586a4bc2e5fc9811">expectedArgMin</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classfunc__3.html#a193fa998660591cbf3e3dbea3b41cffd">dimentions</a> ()<span class="keyword">override</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classfunc__4.html">   93</a></span>&#160;<span class="keyword">class </span><a class="code" href="classfunc__4.html">func_4</a> : <span class="keyword">public</span> <a class="code" href="classfunc.html">func</a> {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classfunc__4.html#a2385d7048d5e7a5052411ba9e6c475d7">eval</a>(<span class="keyword">const</span>  std::vector&lt;double&gt;&amp; x) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classfunc__4.html#ac1d64786a8bd10b079604989cca1df66">print</a>() <span class="keyword">override</span> ;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classfunc__4.html#a17f67f1cec2cba5105e9d2c6bc613e9a">expectedArgMin</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classfunc__4.html#aec452f9b568a9dcc0503be6e5377cd8a">dimentions</a> ()<span class="keyword">override</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classfunc__5.html">  105</a></span>&#160;<span class="keyword">class </span><a class="code" href="classfunc__5.html">func_5</a> : <span class="keyword">public</span> <a class="code" href="classfunc.html">func</a> {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classfunc__5.html#aed2e1b7651c18ab1aa6eba60a722db58">eval</a>(<span class="keyword">const</span>  std::vector&lt;double&gt;&amp; x) <span class="keyword">override</span> ;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classfunc__5.html#a7c7a668827575be9024bbc0ec3718aba">print</a>() <span class="keyword">override</span> ;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classfunc__5.html#aec17d73ee820392545354990fcaf2be1">expectedArgMin</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classfunc__5.html#a868bdbd7d55eada4a64d1d7ecdaf0dbe">dimentions</a> ()<span class="keyword">override</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#endif // FUNCOPT_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassfunc__1_html_a1f599af099213288235b653c337d0026"><div class="ttname"><a href="classfunc__1.html#a1f599af099213288235b653c337d0026">func_1::dimentions</a></div><div class="ttdeci">int dimentions() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:14</div></div>
+<div class="ttc" id="aclassfunc__4_html"><div class="ttname"><a href="classfunc__4.html">func_4</a></div><div class="ttdoc">Дочерний класс функций. Функция Изома. Унаследован от ранее созданного класса func.</div><div class="ttdef"><b>Definition:</b> funcOpt.h:93</div></div>
+<div class="ttc" id="aclassfunc__1_html_ad83b28755986b34fda91463a4838d96a"><div class="ttname"><a href="classfunc__1.html#ad83b28755986b34fda91463a4838d96a">func_1::eval</a></div><div class="ttdeci">double eval(const std::vector&lt; double &gt; &amp;x) override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:2</div></div>
+<div class="ttc" id="aclassfunc__2_html_a6305d8a33656232b0e7735a0c4ca92f0"><div class="ttname"><a href="classfunc__2.html#a6305d8a33656232b0e7735a0c4ca92f0">func_2::eval</a></div><div class="ttdeci">double eval(const std::vector&lt; double &gt; &amp;x) override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:16</div></div>
+<div class="ttc" id="aclassfunc__1_html"><div class="ttname"><a href="classfunc__1.html">func_1</a></div><div class="ttdoc">Дочерний класс функций. Тривиальная функция от двух аргументов. Унаследован от ранее созданного класс...</div><div class="ttdef"><b>Definition:</b> funcOpt.h:57</div></div>
+<div class="ttc" id="aclassfunc__3_html_a400d8fa56699349ee67805f216542374"><div class="ttname"><a href="classfunc__3.html#a400d8fa56699349ee67805f216542374">func_3::print</a></div><div class="ttdeci">void print() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:33</div></div>
+<div class="ttc" id="aclassfunc_html_a25ac1173786b7f24d70698c6c61fc2c1"><div class="ttname"><a href="classfunc.html#a25ac1173786b7f24d70698c6c61fc2c1">func::eval</a></div><div class="ttdeci">virtual double eval(const std::vector&lt; double &gt; &amp;x)=0</div></div>
+<div class="ttc" id="aclassfunc__3_html"><div class="ttname"><a href="classfunc__3.html">func_3</a></div><div class="ttdoc">Дочерний класс функций. Функция Бута. Унаследован от ранее созданного класса func.</div><div class="ttdef"><b>Definition:</b> funcOpt.h:81</div></div>
+<div class="ttc" id="aclassfunc_html"><div class="ttname"><a href="classfunc.html">func</a></div><div class="ttdoc">Родительский виртуальный класс функций.</div><div class="ttdef"><b>Definition:</b> funcOpt.h:32</div></div>
+<div class="ttc" id="aclassfunc__3_html_a3c3f31f70f6df1e3586a4bc2e5fc9811"><div class="ttname"><a href="classfunc__3.html#a3c3f31f70f6df1e3586a4bc2e5fc9811">func_3::expectedArgMin</a></div><div class="ttdeci">void expectedArgMin() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:37</div></div>
+<div class="ttc" id="aclassfunc__4_html_aec452f9b568a9dcc0503be6e5377cd8a"><div class="ttname"><a href="classfunc__4.html#aec452f9b568a9dcc0503be6e5377cd8a">func_4::dimentions</a></div><div class="ttdeci">int dimentions() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:55</div></div>
+<div class="ttc" id="aclassfunc__5_html_aec17d73ee820392545354990fcaf2be1"><div class="ttname"><a href="classfunc__5.html#aec17d73ee820392545354990fcaf2be1">func_5::expectedArgMin</a></div><div class="ttdeci">void expectedArgMin() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:65</div></div>
+<div class="ttc" id="aclassfunc__5_html_a868bdbd7d55eada4a64d1d7ecdaf0dbe"><div class="ttname"><a href="classfunc__5.html#a868bdbd7d55eada4a64d1d7ecdaf0dbe">func_5::dimentions</a></div><div class="ttdeci">int dimentions() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:69</div></div>
+<div class="ttc" id="aclassfunc__2_html_a37b7f2800da9f85b95e13bedaf009617"><div class="ttname"><a href="classfunc__2.html#a37b7f2800da9f85b95e13bedaf009617">func_2::print</a></div><div class="ttdeci">void print() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:19</div></div>
+<div class="ttc" id="aclassfunc__2_html_a664588444a1724c707d6e2cac9f27837"><div class="ttname"><a href="classfunc__2.html#a664588444a1724c707d6e2cac9f27837">func_2::dimentions</a></div><div class="ttdeci">int dimentions() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:27</div></div>
+<div class="ttc" id="aclassfunc__3_html_a193fa998660591cbf3e3dbea3b41cffd"><div class="ttname"><a href="classfunc__3.html#a193fa998660591cbf3e3dbea3b41cffd">func_3::dimentions</a></div><div class="ttdeci">int dimentions() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:41</div></div>
+<div class="ttc" id="aclassfunc_html_a9c337bc668abdf3aa25b7deff2276d16"><div class="ttname"><a href="classfunc.html#a9c337bc668abdf3aa25b7deff2276d16">func::print</a></div><div class="ttdeci">virtual void print()=0</div></div>
+<div class="ttc" id="aclassfunc__2_html_ade1ce0191ee05869c733e6a833cd5c39"><div class="ttname"><a href="classfunc__2.html#ade1ce0191ee05869c733e6a833cd5c39">func_2::expectedArgMin</a></div><div class="ttdeci">void expectedArgMin() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:23</div></div>
+<div class="ttc" id="aclassfunc__5_html_aed2e1b7651c18ab1aa6eba60a722db58"><div class="ttname"><a href="classfunc__5.html#aed2e1b7651c18ab1aa6eba60a722db58">func_5::eval</a></div><div class="ttdeci">double eval(const std::vector&lt; double &gt; &amp;x) override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:58</div></div>
+<div class="ttc" id="aclassfunc__4_html_ac1d64786a8bd10b079604989cca1df66"><div class="ttname"><a href="classfunc__4.html#ac1d64786a8bd10b079604989cca1df66">func_4::print</a></div><div class="ttdeci">void print() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:47</div></div>
+<div class="ttc" id="aclassfunc__5_html_a7c7a668827575be9024bbc0ec3718aba"><div class="ttname"><a href="classfunc__5.html#a7c7a668827575be9024bbc0ec3718aba">func_5::print</a></div><div class="ttdeci">void print() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:61</div></div>
+<div class="ttc" id="aclassfunc_html_af3fca67b06e2ca1e61e2d7835846132f"><div class="ttname"><a href="classfunc.html#af3fca67b06e2ca1e61e2d7835846132f">func::dimentions</a></div><div class="ttdeci">virtual int dimentions()=0</div></div>
+<div class="ttc" id="aclassfunc__1_html_a198f11bde289443c6bfd1230b74c523b"><div class="ttname"><a href="classfunc__1.html#a198f11bde289443c6bfd1230b74c523b">func_1::print</a></div><div class="ttdeci">void print() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:5</div></div>
+<div class="ttc" id="aclassfunc__3_html_a6c3dc2bbf9f5a32c112aa23a715bd1c6"><div class="ttname"><a href="classfunc__3.html#a6c3dc2bbf9f5a32c112aa23a715bd1c6">func_3::eval</a></div><div class="ttdeci">double eval(const std::vector&lt; double &gt; &amp;x) override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:30</div></div>
+<div class="ttc" id="aclassfunc__5_html"><div class="ttname"><a href="classfunc__5.html">func_5</a></div><div class="ttdoc">Дочерний класс функций. Тривиальная функция трёх аргументов. Унаследован от ранее созданного класса f...</div><div class="ttdef"><b>Definition:</b> funcOpt.h:105</div></div>
+<div class="ttc" id="aclassfunc__1_html_a0a9378546d276e42f669feeaca96430a"><div class="ttname"><a href="classfunc__1.html#a0a9378546d276e42f669feeaca96430a">func_1::expectedArgMin</a></div><div class="ttdeci">void expectedArgMin() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:9</div></div>
+<div class="ttc" id="aclassfunc__4_html_a17f67f1cec2cba5105e9d2c6bc613e9a"><div class="ttname"><a href="classfunc__4.html#a17f67f1cec2cba5105e9d2c6bc613e9a">func_4::expectedArgMin</a></div><div class="ttdeci">void expectedArgMin() override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:51</div></div>
+<div class="ttc" id="aclassfunc__2_html"><div class="ttname"><a href="classfunc__2.html">func_2</a></div><div class="ttdoc">Дочерний класс функций. Функция Розенброка. Унаследован от ранее созданного класса func.</div><div class="ttdef"><b>Definition:</b> funcOpt.h:69</div></div>
+<div class="ttc" id="aclassfunc_html_a6b8594d18f04da532feccab749e52ed7"><div class="ttname"><a href="classfunc.html#a6b8594d18f04da532feccab749e52ed7">func::expectedArgMin</a></div><div class="ttdeci">virtual void expectedArgMin()=0</div></div>
+<div class="ttc" id="aclassfunc__4_html_a2385d7048d5e7a5052411ba9e6c475d7"><div class="ttname"><a href="classfunc__4.html#a2385d7048d5e7a5052411ba9e6c475d7">func_4::eval</a></div><div class="ttdeci">double eval(const std::vector&lt; double &gt; &amp;x) override</div><div class="ttdef"><b>Definition:</b> FuncOpt.cpp:44</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

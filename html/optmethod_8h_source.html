@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Function optimization: Исходный файл optmethod.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Function optimization
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Programm provides an opportinity to calculate an argument of minunimum of functions.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">optmethod.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="optmethod_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OPTMETHOD_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OPTMETHOD_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="funcOpt_8h.html">funcOpt.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="area_8h.html">area.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stopCrit_8h.html">stopCrit.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classOptMethod.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classOptMethod.html">OptMethod</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;double&gt; <a class="code" href="classOptMethod.html#a22b914e66779e98b653d559a9aa902f9">optimize</a>(<a class="code" href="classfunc.html">func</a> * x, <a class="code" href="classarea.html">area</a> * a, <a class="code" href="classStopCriteria.html">StopCriteria</a>* stop, std::vector&lt;double&gt; start, <span class="keywordtype">int</span> iternum, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> z) =0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classOptMethod.html#a6f6af7557e8ba1c4a43e5e7c04b2bd7d">name_youself</a>()=0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classCoordDescent.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCoordDescent.html">CoordDescent</a>: <span class="keyword">public</span> <a class="code" href="classOptMethod.html">OptMethod</a> {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    std::vector&lt;double&gt; <a class="code" href="classCoordDescent.html#abebd4d473afeb6ecdda1d9f574ec3f5c">optimize</a>(<a class="code" href="classfunc.html">func</a> *f, <a class="code" href="classarea.html">area</a> *a, <a class="code" href="classStopCriteria.html">StopCriteria</a>* stop, std::vector&lt;double&gt;, <span class="keywordtype">int</span> iternum, <span class="keywordtype">double</span> len_of_seg, <span class="keywordtype">double</span> eps)<span class="keyword">override</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCoordDescent.html#a04a51198fd7d23a4ce10a704686ea26c">name_youself</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classStochastic.html">   67</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStochastic.html">Stochastic</a>:<span class="keyword">public</span> <a class="code" href="classOptMethod.html">OptMethod</a> {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::vector&lt;double&gt; <a class="code" href="classStochastic.html#a7780b421a3ccca5d001c41ea273ee127">optimize</a>(<a class="code" href="classfunc.html">func</a> *f, <a class="code" href="classarea.html">area</a> *a, <a class="code" href="classStopCriteria.html">StopCriteria</a>* stop, std::vector&lt;double&gt;, <span class="keywordtype">int</span> iternum, <span class="keywordtype">double</span> p,  <span class="keywordtype">double</span> delta)<span class="keyword">override</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStochastic.html#a9e96d2309a62a9370840ea3a574ca78d">name_youself</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif // OPTMETHOD_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassCoordDescent_html"><div class="ttname"><a href="classCoordDescent.html">CoordDescent</a></div><div class="ttdoc">Дочерний класс методов. Реализует поиск минимума вероятностным методом. Унаследован от ранее созданно...</div><div class="ttdef"><b>Definition:</b> optmethod.h:42</div></div>
+<div class="ttc" id="aclassarea_html"><div class="ttname"><a href="classarea.html">area</a></div><div class="ttdoc">Родительский виртуальный класс областей. Область представляет собой декартово произведение нескольких...</div><div class="ttdef"><b>Definition:</b> area.h:13</div></div>
+<div class="ttc" id="aclassStochastic_html_a9e96d2309a62a9370840ea3a574ca78d"><div class="ttname"><a href="classStochastic.html#a9e96d2309a62a9370840ea3a574ca78d">Stochastic::name_youself</a></div><div class="ttdeci">void name_youself() override</div><div class="ttdef"><b>Definition:</b> OptMethod.cpp:61</div></div>
+<div class="ttc" id="aclassOptMethod_html"><div class="ttname"><a href="classOptMethod.html">OptMethod</a></div><div class="ttdoc">Родительский виртуальный класс методов. Метод позволяет находить аргумент минимума функции.</div><div class="ttdef"><b>Definition:</b> optmethod.h:17</div></div>
+<div class="ttc" id="aclassCoordDescent_html_abebd4d473afeb6ecdda1d9f574ec3f5c"><div class="ttname"><a href="classCoordDescent.html#abebd4d473afeb6ecdda1d9f574ec3f5c">CoordDescent::optimize</a></div><div class="ttdeci">std::vector&lt; double &gt; optimize(func *f, area *a, StopCriteria *stop, std::vector&lt; double &gt;, int iternum, double len_of_seg, double eps) override</div><div class="ttdef"><b>Definition:</b> OptMethod.cpp:25</div></div>
+<div class="ttc" id="aclassfunc_html"><div class="ttname"><a href="classfunc.html">func</a></div><div class="ttdoc">Родительский виртуальный класс функций.</div><div class="ttdef"><b>Definition:</b> funcOpt.h:32</div></div>
+<div class="ttc" id="afuncOpt_8h_html"><div class="ttname"><a href="funcOpt_8h.html">funcOpt.h</a></div><div class="ttdoc">Заголовочный файл с описанием классов, относящихся к функциям, для которых будет искаться минимум.</div></div>
+<div class="ttc" id="aclassStochastic_html_a7780b421a3ccca5d001c41ea273ee127"><div class="ttname"><a href="classStochastic.html#a7780b421a3ccca5d001c41ea273ee127">Stochastic::optimize</a></div><div class="ttdeci">std::vector&lt; double &gt; optimize(func *f, area *a, StopCriteria *stop, std::vector&lt; double &gt;, int iternum, double p, double delta) override</div><div class="ttdef"><b>Definition:</b> OptMethod.cpp:63</div></div>
+<div class="ttc" id="aclassOptMethod_html_a22b914e66779e98b653d559a9aa902f9"><div class="ttname"><a href="classOptMethod.html#a22b914e66779e98b653d559a9aa902f9">OptMethod::optimize</a></div><div class="ttdeci">virtual std::vector&lt; double &gt; optimize(func *x, area *a, StopCriteria *stop, std::vector&lt; double &gt; start, int iternum, double y, double z)=0</div></div>
+<div class="ttc" id="astopCrit_8h_html"><div class="ttname"><a href="stopCrit_8h.html">stopCrit.h</a></div><div class="ttdoc">Заголовочный файл с описанием классов, относящихся к критериям остановки процесса поиска минимума.</div></div>
+<div class="ttc" id="aarea_8h_html"><div class="ttname"><a href="area_8h.html">area.h</a></div><div class="ttdoc">Заголовочный файл с описанием классов, относящихся к областям, на которых будет искаться минимум функ...</div></div>
+<div class="ttc" id="aclassOptMethod_html_a6f6af7557e8ba1c4a43e5e7c04b2bd7d"><div class="ttname"><a href="classOptMethod.html#a6f6af7557e8ba1c4a43e5e7c04b2bd7d">OptMethod::name_youself</a></div><div class="ttdeci">virtual void name_youself()=0</div></div>
+<div class="ttc" id="aclassStochastic_html"><div class="ttname"><a href="classStochastic.html">Stochastic</a></div><div class="ttdoc">Дочерний класс методов. Реализует поиск минимума методом c спуска. Унаследован от ранее созданного кл...</div><div class="ttdef"><b>Definition:</b> optmethod.h:67</div></div>
+<div class="ttc" id="aclassCoordDescent_html_a04a51198fd7d23a4ce10a704686ea26c"><div class="ttname"><a href="classCoordDescent.html#a04a51198fd7d23a4ce10a704686ea26c">CoordDescent::name_youself</a></div><div class="ttdeci">void name_youself() override</div><div class="ttdef"><b>Definition:</b> OptMethod.cpp:23</div></div>
+<div class="ttc" id="aclassStopCriteria_html"><div class="ttname"><a href="classStopCriteria.html">StopCriteria</a></div><div class="ttdoc">Родительский виртуальный класс критерия остановки.</div><div class="ttdef"><b>Definition:</b> stopCrit.h:14</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

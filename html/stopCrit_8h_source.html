@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Function optimization: Исходный файл stopCrit.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Function optimization
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Programm provides an opportinity to calculate an argument of minunimum of functions.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">stopCrit.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stopCrit_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef STOPCRIT_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define STOPCRIT_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include&lt;vector&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classStopCriteria.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStopCriteria.html">StopCriteria</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classStopCriteria.html#a7d54c4a35d83d45dd0884da46377cdee">condition</a>(<span class="keywordtype">int</span>, <span class="keywordtype">double</span>)=0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classStopCriteria.html#ade4c0545248dd58cf831337b7312abf5">quit_message</a>()=0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classStopCriteria.html#a0568b0231eb74e5a26341db99885ebd8">   28</a></span>&#160;    <a class="code" href="classStopCriteria.html#a0568b0231eb74e5a26341db99885ebd8">StopCriteria</a>(){};</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classStopCriteria.html#afc427a6c7efc5196a68683565b806cce">   33</a></span>&#160;    <a class="code" href="classStopCriteria.html#afc427a6c7efc5196a68683565b806cce">StopCriteria</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">double</span> y):<a class="code" href="classStopCriteria.html#a0dc5e230bbe791c90c51dbda0ff832cf">itern</a>(x),<a class="code" href="classStopCriteria.html#aa973616ac6030000813916b84407ba68">eps</a>(y){};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classStopCriteria.html#a0dc5e230bbe791c90c51dbda0ff832cf">   36</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classStopCriteria.html#a0dc5e230bbe791c90c51dbda0ff832cf">itern</a>=100;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classStopCriteria.html#aa973616ac6030000813916b84407ba68">   39</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStopCriteria.html#aa973616ac6030000813916b84407ba68">eps</a>=0.001;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classStopNumLI.html">   46</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStopNumLI.html">StopNumLI</a>: <span class="keyword">public</span> <a class="code" href="classStopCriteria.html">StopCriteria</a>{       <span class="comment">//stop criteria: number of iterations since last improvement</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classStopNumLI.html#a45529b9c9250fcaf2bb262791c7a3880">condition</a>(<span class="keywordtype">int</span>, <span class="keywordtype">double</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classStopNumLI.html#acbbec1f2340065b078e2034e03a6502d">quit_message</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   <a class="code" href="classStopNumLI.html">StopNumLI</a>(){};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   <a class="code" href="classStopNumLI.html">StopNumLI</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">double</span> y):<a class="code" href="classStopCriteria.html#a0568b0231eb74e5a26341db99885ebd8">StopCriteria</a>(x,y){};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classStopValLI.html">   58</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStopValLI.html">StopValLI</a>: <span class="keyword">public</span> <a class="code" href="classStopCriteria.html">StopCriteria</a>{        <span class="comment">//stop criteria: value of last improvement</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classStopValLI.html#a52d1315e49d8c05969e6bb647be15f1f">condition</a>(<span class="keywordtype">int</span>, <span class="keywordtype">double</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classStopValLI.html#a3abf7b987636322dd1d3cb7de711ad73">quit_message</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <a class="code" href="classStopValLI.html">StopValLI</a>(){};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   <a class="code" href="classStopValLI.html">StopValLI</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">double</span> y):<a class="code" href="classStopCriteria.html#a0568b0231eb74e5a26341db99885ebd8">StopCriteria</a>(x,y){};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classStopNULL.html">   71</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStopNULL.html">StopNULL</a>: <span class="keyword">public</span> <a class="code" href="classStopCriteria.html">StopCriteria</a>{        <span class="comment">//stop criteria: value of last improvement</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classStopNULL.html#a86d2e0337546a513a3d6f21867f80d47">condition</a>(<span class="keywordtype">int</span>, <span class="keywordtype">double</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classStopNULL.html#a330ca7104361b179ec8ded4936491338">quit_message</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   <a class="code" href="classStopNULL.html">StopNULL</a>(){};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;   <a class="code" href="classStopNULL.html">StopNULL</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">double</span> y):<a class="code" href="classStopCriteria.html#a0568b0231eb74e5a26341db99885ebd8">StopCriteria</a>(x,y){};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif // STOPCRIT_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassStopCriteria_html_a0568b0231eb74e5a26341db99885ebd8"><div class="ttname"><a href="classStopCriteria.html#a0568b0231eb74e5a26341db99885ebd8">StopCriteria::StopCriteria</a></div><div class="ttdeci">StopCriteria()</div><div class="ttdoc">Конструктор.</div><div class="ttdef"><b>Definition:</b> stopCrit.h:28</div></div>
+<div class="ttc" id="aclassStopCriteria_html_a0dc5e230bbe791c90c51dbda0ff832cf"><div class="ttname"><a href="classStopCriteria.html#a0dc5e230bbe791c90c51dbda0ff832cf">StopCriteria::itern</a></div><div class="ttdeci">int itern</div><div class="ttdoc">Целочисленная переменная.</div><div class="ttdef"><b>Definition:</b> stopCrit.h:36</div></div>
+<div class="ttc" id="aclassStopValLI_html"><div class="ttname"><a href="classStopValLI.html">StopValLI</a></div><div class="ttdoc">Дочерний класс методов. Останавливает процесс поиска минимума при слишком малом улучшении....</div><div class="ttdef"><b>Definition:</b> stopCrit.h:58</div></div>
+<div class="ttc" id="aclassStopNumLI_html_acbbec1f2340065b078e2034e03a6502d"><div class="ttname"><a href="classStopNumLI.html#acbbec1f2340065b078e2034e03a6502d">StopNumLI::quit_message</a></div><div class="ttdeci">void quit_message() override</div><div class="ttdef"><b>Definition:</b> StopCriterion.cpp:15</div></div>
+<div class="ttc" id="aclassStopCriteria_html_ade4c0545248dd58cf831337b7312abf5"><div class="ttname"><a href="classStopCriteria.html#ade4c0545248dd58cf831337b7312abf5">StopCriteria::quit_message</a></div><div class="ttdeci">virtual void quit_message()=0</div></div>
+<div class="ttc" id="aclassStopNumLI_html_a45529b9c9250fcaf2bb262791c7a3880"><div class="ttname"><a href="classStopNumLI.html#a45529b9c9250fcaf2bb262791c7a3880">StopNumLI::condition</a></div><div class="ttdeci">bool condition(int, double) override</div><div class="ttdef"><b>Definition:</b> StopCriterion.cpp:3</div></div>
+<div class="ttc" id="aclassStopNULL_html_a86d2e0337546a513a3d6f21867f80d47"><div class="ttname"><a href="classStopNULL.html#a86d2e0337546a513a3d6f21867f80d47">StopNULL::condition</a></div><div class="ttdeci">bool condition(int, double) override</div><div class="ttdef"><b>Definition:</b> StopCriterion.cpp:11</div></div>
+<div class="ttc" id="aclassStopValLI_html_a3abf7b987636322dd1d3cb7de711ad73"><div class="ttname"><a href="classStopValLI.html#a3abf7b987636322dd1d3cb7de711ad73">StopValLI::quit_message</a></div><div class="ttdeci">void quit_message() override</div><div class="ttdef"><b>Definition:</b> StopCriterion.cpp:17</div></div>
+<div class="ttc" id="aclassStopCriteria_html_a7d54c4a35d83d45dd0884da46377cdee"><div class="ttname"><a href="classStopCriteria.html#a7d54c4a35d83d45dd0884da46377cdee">StopCriteria::condition</a></div><div class="ttdeci">virtual bool condition(int, double)=0</div></div>
+<div class="ttc" id="aclassStopValLI_html_a52d1315e49d8c05969e6bb647be15f1f"><div class="ttname"><a href="classStopValLI.html#a52d1315e49d8c05969e6bb647be15f1f">StopValLI::condition</a></div><div class="ttdeci">bool condition(int, double) override</div><div class="ttdef"><b>Definition:</b> StopCriterion.cpp:7</div></div>
+<div class="ttc" id="aclassStopNULL_html_a330ca7104361b179ec8ded4936491338"><div class="ttname"><a href="classStopNULL.html#a330ca7104361b179ec8ded4936491338">StopNULL::quit_message</a></div><div class="ttdeci">void quit_message() override</div><div class="ttdef"><b>Definition:</b> StopCriterion.cpp:16</div></div>
+<div class="ttc" id="aclassStopCriteria_html_aa973616ac6030000813916b84407ba68"><div class="ttname"><a href="classStopCriteria.html#aa973616ac6030000813916b84407ba68">StopCriteria::eps</a></div><div class="ttdeci">double eps</div><div class="ttdoc">Вещественная переменная.</div><div class="ttdef"><b>Definition:</b> stopCrit.h:39</div></div>
+<div class="ttc" id="aclassStopCriteria_html"><div class="ttname"><a href="classStopCriteria.html">StopCriteria</a></div><div class="ttdoc">Родительский виртуальный класс критерия остановки.</div><div class="ttdef"><b>Definition:</b> stopCrit.h:14</div></div>
+<div class="ttc" id="aclassStopNumLI_html"><div class="ttname"><a href="classStopNumLI.html">StopNumLI</a></div><div class="ttdoc">Дочерний класс критерия остановки. Останавливает процесс поиска минимума при достижении порового числ...</div><div class="ttdef"><b>Definition:</b> stopCrit.h:46</div></div>
+<div class="ttc" id="aclassStopNULL_html"><div class="ttname"><a href="classStopNULL.html">StopNULL</a></div><div class="ttdoc">Дочерний класс критерия остановки. Останавливает процесс поиска минимума при достижении порового числ...</div><div class="ttdef"><b>Definition:</b> stopCrit.h:71</div></div>
+<div class="ttc" id="aclassStopCriteria_html_afc427a6c7efc5196a68683565b806cce"><div class="ttname"><a href="classStopCriteria.html#afc427a6c7efc5196a68683565b806cce">StopCriteria::StopCriteria</a></div><div class="ttdeci">StopCriteria(int x, double y)</div><div class="ttdef"><b>Definition:</b> stopCrit.h:33</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

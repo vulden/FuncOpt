@@ -1,0 +1,4 @@
+<map id="StopNULL" name="StopNULL">
+<area shape="rect" id="node1" title="Дочерний класс критерия остановки. Останавливает процесс поиска минимума при достижении порового числ..." alt="" coords="12,80,97,107"/>
+<area shape="rect" id="node2" href="$classStopCriteria.html" title="Родительский виртуальный класс критерия остановки." alt="" coords="5,5,104,32"/>
+</map>

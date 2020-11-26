@@ -1,0 +1,4 @@
+<map id="Stochastic" name="Stochastic">
+<area shape="rect" id="node1" title="Дочерний класс методов. Реализует поиск минимума методом c спуска. Унаследован от ранее созданного кл..." alt="" coords="8,80,97,107"/>
+<area shape="rect" id="node2" href="$classOptMethod.html" title="Родительский виртуальный класс методов. Метод позволяет находить аргумент минимума функции." alt="" coords="5,5,100,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="StopValLI" name="StopValLI">
+<area shape="rect" id="node1" title="Дочерний класс методов. Останавливает процесс поиска минимума при слишком малом улучшении...." alt="" coords="13,80,96,107"/>
+<area shape="rect" id="node2" href="$classStopCriteria.html" title="Родительский виртуальный класс критерия остановки." alt="" coords="5,5,104,32"/>
+</map>

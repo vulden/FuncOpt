@@ -1,0 +1,6 @@
+<map id="StopCriteria" name="StopCriteria">
+<area shape="rect" id="node1" title="Родительский виртуальный класс критерия остановки." alt="" coords="112,5,211,32"/>
+<area shape="rect" id="node2" href="$classStopNULL.html" title="Дочерний класс критерия остановки. Останавливает процесс поиска минимума при достижении порового числ..." alt="" coords="5,80,91,107"/>
+<area shape="rect" id="node3" href="$classStopNumLI.html" title="Дочерний класс критерия остановки. Останавливает процесс поиска минимума при достижении порового числ..." alt="" coords="115,80,208,107"/>
+<area shape="rect" id="node4" href="$classStopValLI.html" title="Дочерний класс методов. Останавливает процесс поиска минимума при слишком малом улучшении...." alt="" coords="232,80,315,107"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="CoordDescent" name="CoordDescent">
+<area shape="rect" id="node1" title="Дочерний класс методов. Реализует поиск минимума вероятностным методом. Унаследован от ранее созданно..." alt="" coords="5,80,119,107"/>
+<area shape="rect" id="node2" href="$classOptMethod.html" title="Родительский виртуальный класс методов. Метод позволяет находить аргумент минимума функции." alt="" coords="15,5,109,32"/>
+</map>
