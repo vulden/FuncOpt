@@ -7,7 +7,7 @@ void func_1::print()  {
     return;
 }
 void func_1::expectedArgMin() {
-    std::cout<<"expected Argument of minimum is (1,0)";
+    std::cout<<"Expected argument of minimum is (1,0)";
     return;
 }
 
@@ -21,7 +21,7 @@ void func_2::print()  {
     return;
 }
 void func_2::expectedArgMin() {
-    std::cout<<"expected Argument of minimum is (1,1)";
+    std::cout<<"Expected argument of minimum is (1,1)";
     return;
 }
 int func_2::dimentions() {return 2;}
@@ -35,7 +35,7 @@ void func_3::print()  {
     return;
 }
 void func_3::expectedArgMin() {
-    std::cout<<"expected Argument of minimum is (1,3)";
+    std::cout<<"Expected argument of minimum is (1,3)";
     return;
 }
 int func_3::dimentions() {return 2;}
@@ -49,7 +49,7 @@ void func_4::print()  {
     return;
 }
 void func_4::expectedArgMin() {
-    std::cout<<"expected Argument of minimum is ("<<pi<<","<<pi<<")";
+    std::cout<<"Expected argument of minimum is ("<<pi<<","<<pi<<")";
     return;
 }
 int func_4::dimentions() {return 2;}
@@ -63,7 +63,7 @@ void func_5::print()  {
     return;
 }
 void func_5::expectedArgMin() {
-    std::cout<<"expected Argument of minimum is (1,2,4)";
+    std::cout<<"Expected argument of minimum is (1,2,4)";
     return;
 }
 int func_5::dimentions() {return 3;}

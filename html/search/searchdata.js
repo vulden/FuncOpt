@@ -1,10 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "acdefiknopqs",
+  0: "acdefiklnopqs",
   1: "acfos",
   2: "afos",
   3: "acdenopqs",
-  4: "ceik"
+  4: "cdeiklp",
+  5: "f"
 };
 
 var indexSectionNames =
@@ -13,7 +14,8 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "variables"
+  4: "variables",
+  5: "pages"
 };
 
 var indexSectionLabels =
@@ -22,6 +24,7 @@ var indexSectionLabels =
   1: "Классы",
   2: "Файлы",
   3: "Функции",
-  4: "Переменные"
+  4: "Переменные",
+  5: "Страницы"
 };
 

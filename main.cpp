@@ -71,23 +71,27 @@ int main() {
                    "1. Local search (stochastic).\n"
                    "2. Coordinate descent.\n";
         methodtype=getValueInBounders(1,2);
-        double x2,x3;
+        double z;
         OptMethod* method;
         switch (methodtype) {
         case 1:{
             method = new Stochastic;
             std:: cout<<"Enter p:\n";
-            x2 = getValueInBounders(0.0,1.0);
+            z = getValueInBounders(0.0,1.0);
+            method->set_p(z);
             std:: cout<<"Enter delta:\n";
-            x3 = getValueInBounders(0.0,1.0);
+            z = getValueInBounders(0.0,1.0);
+            method->set_delta(z);
             break;
         }
         case 2:{
             method = new CoordDescent;
             std::cout<<"Enter length of segment:\n";
-            x2 = getValueInBounders(0.0,100000.0);
+            z = getValueInBounders(0.0,100000.0);
+            method->set_len_of_seg(z);
             std::cout<<"Enter epsilon:\n";
-            x3 = getValueInBounders(0.0,1.0);
+            z = getValueInBounders(0.0,1.0);
+            method ->set_eps(z);
             break;
         }
         }
@@ -154,15 +158,17 @@ int main() {
             result[i]=getValueInBounders(my_area->coord[i].first,my_area->coord[i].second);
         }
 
-        result = method->optimize(f, my_area, stop, result, num_of_iter, x2, x3);
+        result = method->optimize(f, my_area, stop, result, num_of_iter);
+        std::cout<<"Result is: (";
         for (int i = 0; i < num_of_dimentions; ++i)
-            std::cout << result[i] << " ";
-
+            std::cout << result[i] << " , ";
+        std::cout<<")";
         f->expectedArgMin();
-        std::cout<<"Do you want to continue? [Y/n]";
+        std::cout<<"\nDo you want to continue? [Y/n]";
         char t;
         std::cin>>t;
         if(t!='Y') break;
+
     }
     return 0;
 }

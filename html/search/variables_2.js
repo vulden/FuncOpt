@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['itern_66',['itern',['../classStopCriteria.html#a0dc5e230bbe791c90c51dbda0ff832cf',1,'StopCriteria']]]
+  ['eps_78',['eps',['../classCoordDescent.html#a5bd4760bed0afbe9efc3586c45d18ced',1,'CoordDescent::eps()'],['../classStopCriteria.html#aa973616ac6030000813916b84407ba68',1,'StopCriteria::eps()']]]
 ];

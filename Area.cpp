@@ -11,3 +11,4 @@ area_easy::area_easy(int a):area(a){
 area_hard::area_hard(const std::vector<std::pair<double, double>> & v):area(v.size()){
         coord=v;
 }
+

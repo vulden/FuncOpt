@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['coorddescent_35',['CoordDescent',['../classCoordDescent.html',1,'']]]
+  ['coorddescent_43',['CoordDescent',['../classCoordDescent.html',1,'']]]
 ];

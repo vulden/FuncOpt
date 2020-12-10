@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['print_24',['print',['../classfunc.html#a9c337bc668abdf3aa25b7deff2276d16',1,'func::print()'],['../classfunc__1.html#a198f11bde289443c6bfd1230b74c523b',1,'func_1::print()'],['../classfunc__2.html#a37b7f2800da9f85b95e13bedaf009617',1,'func_2::print()'],['../classfunc__3.html#a400d8fa56699349ee67805f216542374',1,'func_3::print()'],['../classfunc__4.html#ac1d64786a8bd10b079604989cca1df66',1,'func_4::print()'],['../classfunc__5.html#a7c7a668827575be9024bbc0ec3718aba',1,'func_5::print()']]]
+  ['optimize_24',['optimize',['../classOptMethod.html#a0a3d245835873fe07322f1d7bdceb99a',1,'OptMethod::optimize()'],['../classCoordDescent.html#aad15cb090175502b91a689d56f6d1cc0',1,'CoordDescent::optimize()'],['../classStochastic.html#a1c3724e952e160b44d36038ec6d26984',1,'Stochastic::optimize()']]],
+  ['optmethod_25',['OptMethod',['../classOptMethod.html',1,'']]],
+  ['optmethod_2eh_26',['optmethod.h',['../optmethod_8h.html',1,'']]]
 ];

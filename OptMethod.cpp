@@ -21,21 +21,23 @@ double ternary_search(func *f, const std::vector<double> &x, int k, double l, do
 }
 
 void CoordDescent::name_youself(){std::cout<<"COORDINATE DESCENT";}
+void CoordDescent::set_eps(double t) {this->eps =t;}
+void CoordDescent::set_len_of_seg(double t) {this->len_of_seg =t;}
 
-std::vector<double> CoordDescent::optimize(func *f, area *a, StopCriteria* stop, std::vector<double> start, int iternum, double len_of_seg, double eps) {
+std::vector<double> CoordDescent::optimize(func *f, area *a, StopCriteria* stop, std::vector<double> start, int iternum) {
     std::vector<std::vector<double>> path;
     std::vector<double> x(start);
     int niter=0;
     double fmin=INT32_MAX;
     for (int i = 0; i < iternum; ++i) {
         int coord = (i % (a->k));            //current coordinate
-        int num_of_seg = (a->coord[coord].second - a->coord[coord].first) / len_of_seg;
+        int num_of_seg = (a->coord[coord].second - a->coord[coord].first) / this->len_of_seg;
         double prevf,ftemp,temp,argmin;
         prevf = fmin;                       // previous f(min)
         fmin =INT32_MAX;
         for (int j = 0; j < num_of_seg; ++j) {
-           temp = ternary_search(f, x, coord, a->coord[coord].first + j * len_of_seg,
-                                     a->coord[coord].first + (j + 1) * len_of_seg, eps);
+           temp = ternary_search(f, x, coord, a->coord[coord].first + j * this->len_of_seg,
+                                     a->coord[coord].first + (j + 1) * this->len_of_seg, this->eps);
             ftemp = f->eval(VectSet(x, temp, coord));   //x' = x: x[coord]= argmin; ftemp = f(x');
            if (ftemp < fmin) {
                fmin = ftemp;
@@ -45,7 +47,7 @@ std::vector<double> CoordDescent::optimize(func *f, area *a, StopCriteria* stop,
         x[coord] = argmin;
         ftemp = f->eval(x);
         path.push_back(x);
-        if(abs(prevf-ftemp)<eps)
+        if(abs(prevf-ftemp)<this->eps)
             ++niter;
         else
             niter = 0;
@@ -59,8 +61,10 @@ std::vector<double> CoordDescent::optimize(func *f, area *a, StopCriteria* stop,
 }
 
 void Stochastic::name_youself() {std::cout<<"STOCHASTIC: LOCAL SEARCH";}
+void Stochastic::set_delta(double t) {this->delta =t;}
+void Stochastic::set_p(double t) {this->p =t;}
 
-std::vector<double> Stochastic::optimize(func *f, area *a, StopCriteria* stop, std::vector<double> start,int iternum, double p,  double delta) {
+std::vector<double> Stochastic::optimize(func *f, area *a, StopCriteria* stop, std::vector<double> start,int iternum) {
 
     std::random_device rd;      //random numner generator
     std::mt19937 gen(rd());
@@ -74,15 +78,15 @@ std::vector<double> Stochastic::optimize(func *f, area *a, StopCriteria* stop, s
     std::vector<std::vector<double>> path;
 
     for (int j = 0; j < iternum; ++j) {
-        bool local = distrib(gen) >  p;
+        bool local = distrib(gen) >  this->p;
         for (int i = 0; i < n; ++i) {
             if (local){
                 a1 = a->coord[i].first;
                 b1 = a->coord[i].second;
             }
             else  {
-                a1 = x[i]-delta<a->coord[i].first ? a->coord[i].first: x[i]-delta;
-                b1 = x[i]+delta>a->coord[i].second ?a->coord[i].second: x[i]+delta;
+                a1 = x[i]-this->delta<a->coord[i].first ? a->coord[i].first: x[i]-this->delta;
+                b1 = x[i]+this->delta>a->coord[i].second ?a->coord[i].second: x[i]+this->delta;
             }
             x[i] = distrib(gen)*(b1-a1)+a1;
         }

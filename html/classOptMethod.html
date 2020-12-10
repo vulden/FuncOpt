@@ -88,8 +88,20 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:a22b914e66779e98b653d559a9aa902f9"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOptMethod.html#a22b914e66779e98b653d559a9aa902f9">optimize</a> (<a class="el" href="classfunc.html">func</a> *x, <a class="el" href="classarea.html">area</a> *a, <a class="el" href="classStopCriteria.html">StopCriteria</a> *stop, std::vector&lt; double &gt; start, int iternum, double y, double z)=0</td></tr>
-<tr class="separator:a22b914e66779e98b653d559a9aa902f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3d245835873fe07322f1d7bdceb99a"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOptMethod.html#a0a3d245835873fe07322f1d7bdceb99a">optimize</a> (<a class="el" href="classfunc.html">func</a> *x, <a class="el" href="classarea.html">area</a> *a, <a class="el" href="classStopCriteria.html">StopCriteria</a> *stop, std::vector&lt; double &gt; start, int iternum)=0</td></tr>
+<tr class="separator:a0a3d245835873fe07322f1d7bdceb99a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a652698ea44f909ae8408e8bafa3fcfe4"><td class="memItemLeft" align="right" valign="top"><a id="a652698ea44f909ae8408e8bafa3fcfe4"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>set_eps</b> (double)</td></tr>
+<tr class="separator:a652698ea44f909ae8408e8bafa3fcfe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c203711c5737d9eb55c970a50f25e6"><td class="memItemLeft" align="right" valign="top"><a id="a57c203711c5737d9eb55c970a50f25e6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>set_p</b> (double)</td></tr>
+<tr class="separator:a57c203711c5737d9eb55c970a50f25e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd01c319c2f32be56809b36accdd14c"><td class="memItemLeft" align="right" valign="top"><a id="a3bd01c319c2f32be56809b36accdd14c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>set_delta</b> (double)</td></tr>
+<tr class="separator:a3bd01c319c2f32be56809b36accdd14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae42083970017bae67e09310c9ce830b6"><td class="memItemLeft" align="right" valign="top"><a id="ae42083970017bae67e09310c9ce830b6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>set_len_of_seg</b> (double)</td></tr>
+<tr class="separator:ae42083970017bae67e09310c9ce830b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f6af7557e8ba1c4a43e5e7c04b2bd7d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOptMethod.html#a6f6af7557e8ba1c4a43e5e7c04b2bd7d">name_youself</a> ()=0</td></tr>
 <tr class="separator:a6f6af7557e8ba1c4a43e5e7c04b2bd7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -124,8 +136,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a22b914e66779e98b653d559a9aa902f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22b914e66779e98b653d559a9aa902f9">&#9670;&nbsp;</a></span>optimize()</h2>
+<a id="a0a3d245835873fe07322f1d7bdceb99a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a3d245835873fe07322f1d7bdceb99a">&#9670;&nbsp;</a></span>optimize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,19 +173,7 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iternum</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>z</em>&#160;</td>
+          <td class="paramname"><em>iternum</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -194,14 +194,12 @@ $(function() {
     <tr><td class="paramdir">[in]</td><td class="paramname">stop</td><td>Критерий остановки процесса поиска минимума. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>Точка, с которой начинается процесс поиска минимума. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">iternum</td><td>Число итераций. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Некоторый параметр. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">z</td><td>Некоторый параметр. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>Вектор координат значения, на котором реализуется минимум. </dd></dl>
 
-<p>Замещается в <a class="el" href="classStochastic.html#a7780b421a3ccca5d001c41ea273ee127">Stochastic</a> и <a class="el" href="classCoordDescent.html#abebd4d473afeb6ecdda1d9f574ec3f5c">CoordDescent</a>.</p>
+<p>Замещается в <a class="el" href="classStochastic.html#a1c3724e952e160b44d36038ec6d26984">Stochastic</a> и <a class="el" href="classCoordDescent.html#aad15cb090175502b91a689d56f6d1cc0">CoordDescent</a>.</p>
 
 </div>
 </div>

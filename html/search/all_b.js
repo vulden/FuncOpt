@@ -1,9 +1,4 @@
 var searchData=
 [
-  ['stochastic_26',['Stochastic',['../classStochastic.html',1,'']]],
-  ['stopcrit_2eh_27',['stopCrit.h',['../stopCrit_8h.html',1,'']]],
-  ['stopcriteria_28',['StopCriteria',['../classStopCriteria.html',1,'StopCriteria'],['../classStopCriteria.html#a0568b0231eb74e5a26341db99885ebd8',1,'StopCriteria::StopCriteria()'],['../classStopCriteria.html#afc427a6c7efc5196a68683565b806cce',1,'StopCriteria::StopCriteria(int x, double y)']]],
-  ['stopnull_29',['StopNULL',['../classStopNULL.html',1,'']]],
-  ['stopnumli_30',['StopNumLI',['../classStopNumLI.html',1,'']]],
-  ['stopvalli_31',['StopValLI',['../classStopValLI.html',1,'']]]
+  ['quit_5fmessage_29',['quit_message',['../classStopCriteria.html#ade4c0545248dd58cf831337b7312abf5',1,'StopCriteria::quit_message()'],['../classStopNumLI.html#acbbec1f2340065b078e2034e03a6502d',1,'StopNumLI::quit_message()'],['../classStopValLI.html#a3abf7b987636322dd1d3cb7de711ad73',1,'StopValLI::quit_message()'],['../classStopNULL.html#a330ca7104361b179ec8ded4936491338',1,'StopNULL::quit_message()']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eps_65',['eps',['../classStopCriteria.html#aa973616ac6030000813916b84407ba68',1,'StopCriteria']]]
+  ['delta_77',['delta',['../classStochastic.html#a7ce16ce53163fd8d32ed4cbae4a480b3',1,'Stochastic']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['k_67',['k',['../classarea.html#ac69ae006fbfab1dddd19a769aaff80f1',1,'area']]]
+  ['itern_79',['itern',['../classStopCriteria.html#a0dc5e230bbe791c90c51dbda0ff832cf',1,'StopCriteria']]]
 ];
